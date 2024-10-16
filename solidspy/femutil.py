@@ -137,17 +137,37 @@ def shape_tri6(r, s):
         Array with the derivative of the shape functions evaluated at
         the point (r, s).
     """
-    N = np.array(
-        [(1 - r - s) - 2*r*(1 - r - s) - 2*s*(1 - r - s),
-         r - 2*r*(1 - r - s) - 2*r*s,
-         s - 2*r*s - 2*s*(1-r-s),
-         4*r*(1 - r - s),
-         4*r*s,
-         4*s*(1 - r - s)])
+    r = np.asarray(r)
+    s = np.asarray(s)
+    
+    N = np.array([
+        (1 - r - s) - 2*r*(1 - r - s) - 2*s*(1 - r - s),
+        r - 2*r*(1 - r - s) - 2*r*s,
+        s - 2*r*s - 2*s*(1 - r - s),
+        4*r*(1 - r - s),
+        4*r*s,
+        4*s*(1 - r - s)
+    ]).T  # Shape: (n_points, 6)
+    
     dNdr = np.array([
-        [4*r + 4*s - 3, 4*r - 1, 0, -8*r - 4*s + 4, 4*s, -4*s],
-        [4*r + 4*s - 3, 0, 4*s - 1, -4*r, 4*r, -4*r - 8*s + 4]])
-    return N, dNdr
+        4*r + 4*s - 3,
+        4*r - 1,
+        0,
+        -8*r - 4*s + 4,
+        4*s,
+        -4*s
+    ]).T  # Shape: (n_points, 6)
+    
+    dNds = np.array([
+        4*r + 4*s - 3,
+        0,
+        4*s - 1,
+        -4*r,
+        4*r,
+        -4*r - 8*s + 4
+    ]).T  # Shape: (n_points, 6)
+    
+    return N, np.hstack((dNdr, dNds))
 
 # Quadrilaterals
 def shape_quad4(r, s):

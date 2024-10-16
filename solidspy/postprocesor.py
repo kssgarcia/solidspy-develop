@@ -311,7 +311,7 @@ def complete_disp(bc_array, nodes, sol, ndof_node=2):
 
     """
     nnodes = nodes.shape[0]
-    sol_complete = np.zeros([nnodes, ndof_node], dtype=np.float)
+    sol_complete = np.zeros([nnodes, ndof_node], dtype=float)
     for row in range(nnodes):
         for col in range(ndof_node):
             cons = bc_array[row, col]
