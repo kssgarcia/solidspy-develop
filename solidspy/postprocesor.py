@@ -369,7 +369,7 @@ def strain_nodes(nodes, elements, mats, sol_complete):
     IELCON = elements[:, 3:]
 
     for el in range(nelems):
-        young, poisson = mats[np.int(elements[el, 2]), :]
+        young, poisson = mats[int(elements[el, 2]), :]
         shear = young/(2*(1 + poisson))
         fact1 = young/(1 - poisson**2)
         fact2 = poisson*young/(1 - poisson**2)
