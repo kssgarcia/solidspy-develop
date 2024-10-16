@@ -152,35 +152,34 @@ def shape_tri6(r, s):
         scalar_input = True
 
     # Compute shape functions N1 to N6
-    N1 = (1 - r - s) - 2 * r * (1 - r - s) - 2 * s * (1 - r - s)
-    N2 = r - 2 * r * (1 - r - s) - 2 * r * s
-    N3 = s - 2 * r * s - 2 * s * (1 - r - s)
-    N4 = 4 * r * (1 - r - s)
-    N5 = 4 * r * s
-    N6 = 4 * s * (1 - r - s)
-
-    # Stack shape functions horizontally
-    N = np.vstack((N1, N2, N3, N4, N5, N6)).T  # Shape: (n_points, 6)
+    N = np.vstack((
+        (1 - r - s) - 2 * r * (1 - r - s) - 2 * s * (1 - r - s),
+        r - 2 * r * (1 - r - s) - 2 * r * s,
+        s - 2 * r * s - 2 * s * (1 - r - s),
+        4 * r * (1 - r - s),
+        4 * r * s,
+        4 * s * (1 - r - s)
+    )).T  # Shape: (n_points, 6)
 
     # Compute derivatives with respect to r
-    dNdr1 = 4 * r + 4 * s - 3
-    dNdr2 = 4 * r - 1
-    dNdr3 = np.zeros_like(r)
-    dNdr4 = -8 * r - 4 * s + 4
-    dNdr5 = 4 * s
-    dNdr6 = -4 * s
-
-    dNdr = np.vstack((dNdr1, dNdr2, dNdr3, dNdr4, dNdr5, dNdr6)).T  # Shape: (n_points, 6)
+    dNdr = np.vstack((
+        4 * r + 4 * s - 3,
+        4 * r - 1,
+        np.zeros_like(r),
+        -8 * r - 4 * s + 4,
+        4 * s,
+        -4 * s
+    )).T  # Shape: (n_points, 6)
 
     # Compute derivatives with respect to s
-    dNds1 = 4 * r + 4 * s - 3
-    dNds2 = np.zeros_like(r)
-    dNds3 = 4 * s - 1
-    dNds4 = -4 * r
-    dNds5 = 4 * r
-    dNds6 = -4 * r - 8 * s + 4
-
-    dNds = np.vstack((dNds1, dNds2, dNds3, dNds4, dNds5, dNds6)).T  # Shape: (n_points, 6)
+    dNds = np.vstack((
+        4 * r + 4 * s - 3,
+        np.zeros_like(r),
+        4 * s - 1,
+        -4 * r,
+        4 * r,
+        -4 * r - 8 * s + 4
+    )).T  # Shape: (n_points, 6)
 
     # Stack derivatives into a single array
     dNdrds = np.stack((dNdr, dNds), axis=1)  # Shape: (n_points, 2, 6)
