@@ -7,15 +7,12 @@ https://github.com/AppliedMechanics-EAFIT/SolidsPy
 
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
-# To use a consistent encoding
-from codecs import open
-from os import path
-
-here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
+
+
 
 requirements = ['numpy',
                 'scipy',
@@ -26,19 +23,19 @@ requirements = ['numpy',
 setup(
     name='solidspy',
 
-    version='1.0.0',
+    version='1.1.0.post1',
 
     description='A simple Finite Element program',
     long_description=long_description,
-    long_description_content_type="text/x-rst",
+    long_description_content_type="text/markdown",
 
     # The project's main homepage.
     url='https://github.com/AppliedMechanics-EAFIT/SolidsPy',
 
 
     # Author details
-    author='Juan Gomez <jgomezc1@eafit.edu.co>, Nicolas Guarin-Zapata <nicoguarin@gmail.com>',
-    author_email='jgomezc1@eafit.edu.co',
+    author='Nicolas Guarin-Zapata <nguarinz@eafit.edu.co>, Juan Gomez <jgomezc1@eafit.edu.co>',
+    author_email='nguarinz@eafit.edu.co',
 
     license='MIT',
 
