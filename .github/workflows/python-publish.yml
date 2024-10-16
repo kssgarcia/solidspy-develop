@@ -20,6 +20,9 @@ on:
       - main
       - develop
 
+concurrency:
+  group: ci-${{ github.ref }}
+
 jobs:
   test:
     name: Test on Python ${{ matrix.python-version }}
