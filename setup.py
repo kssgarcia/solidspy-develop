@@ -21,9 +21,9 @@ requirements = ['numpy',
                 'meshio==3.0']
 
 setup(
-    name='solidspy',
+    name='SolidsPyKevin',
 
-    version='1.1.0.post1',
+    version='1.1.0.post2',
 
     description='A simple Finite Element program',
     long_description=long_description,
