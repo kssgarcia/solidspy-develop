@@ -101,7 +101,7 @@ def DME(
     return assem_op, bc_array, neq
 
 
-def ele_fun(eletype: int) -> Callable[[NDArray[np.float_], NDArray[np.float_]], Tuple[NDArray[np.float_], NDArray[np.float_]]]:
+def ele_fun(eletype: int) -> Callable[[NDArray[np.float64], NDArray[np.float64]], Tuple[NDArray[np.float64], NDArray[np.float64]]]:
     """Return the function for the element type given
 
     Parameters
@@ -132,13 +132,13 @@ def ele_fun(eletype: int) -> Callable[[NDArray[np.float_], NDArray[np.float_]], 
 
 def retriever(
     elements: NDArray[np.int_],
-    mats: NDArray[np.float_],
-    nodes: NDArray[np.float_],
+    mats: NDArray[np.float64],
+    nodes: NDArray[np.float64],
     ele: int,
     uel: Optional[
-        Callable[[NDArray[np.float_], NDArray[np.float_]], Tuple[NDArray[np.float_], NDArray[np.float_]]]
+        Callable[[NDArray[np.float64], NDArray[np.float64]], Tuple[NDArray[np.float64], NDArray[np.float64]]]
     ] = None,
-) -> Tuple[NDArray[np.float_], NDArray[np.float_]]:
+) -> Tuple[NDArray[np.float64], NDArray[np.float64]]:
     """Computes the elemental stiffness matrix of element ``ele``
 
     Parameters
@@ -172,13 +172,13 @@ def retriever(
 
 def assembler(
     elements: NDArray[np.int_],
-    mats: NDArray[np.float_],
-    nodes: NDArray[np.float_],
+    mats: NDArray[np.float64],
+    nodes: NDArray[np.float64],
     neq: int,
     assem_op: NDArray[np.int_],
     sparse: bool = True,
     uel: Optional[
-        Callable[[NDArray[np.float_], NDArray[np.float_]], Tuple[NDArray[np.float_], NDArray[np.float_]]]
+        Callable[[NDArray[np.float64], NDArray[np.float64]], Tuple[NDArray[np.float64], NDArray[np.float64]]]
     ] = None,
 ) -> Tuple[spmatrix, spmatrix]:
     """Assembles the global stiffness matrix
@@ -221,14 +221,14 @@ def assembler(
 
 def dense_assem(
     elements: NDArray[np.int_],
-    mats: NDArray[np.float_],
-    nodes: NDArray[np.float_],
+    mats: NDArray[np.float64],
+    nodes: NDArray[np.float64],
     neq: int,
     assem_op: NDArray[np.int_],
     uel: Optional[
-        Callable[[NDArray[np.float_], NDArray[np.float_]], Tuple[NDArray[np.float_], NDArray[np.float_]]]
+        Callable[[NDArray[np.float64], NDArray[np.float64]], Tuple[NDArray[np.float64], NDArray[np.float64]]]
     ] = None,
-) -> Tuple[NDArray[np.float_], NDArray[np.float_]]:
+) -> Tuple[NDArray[np.float64], NDArray[np.float64]]:
     """
     Assembles the global stiffness matrix
     using a dense storing scheme
@@ -279,12 +279,12 @@ def dense_assem(
 
 def sparse_assem(
     elements: NDArray[np.int_],
-    mats: NDArray[np.float_],
-    nodes: NDArray[np.float_],
+    mats: NDArray[np.float64],
+    nodes: NDArray[np.float64],
     neq: int,
     assem_op: NDArray[np.int_],
     uel: Optional[
-        Callable[[NDArray[np.float_], NDArray[np.float_]], Tuple[NDArray[np.float_], NDArray[np.float_]]]
+        Callable[[NDArray[np.float64], NDArray[np.float64]], Tuple[NDArray[np.float64], NDArray[np.float64]]]
     ] = None,
 ) -> Tuple[csr_matrix, csr_matrix]:
     """
@@ -352,11 +352,11 @@ def sparse_assem(
 
 
 def loadasem(
-    loads: NDArray[np.float_],
+    loads: NDArray[np.float64],
     bc_array: NDArray[np.int_],
     neq: int,
     ndof_node: int = 2,
-) -> NDArray[np.float_]:
+) -> NDArray[np.float64]:
     """Assembles the global Right Hand Side Vector
 
     Parameters
