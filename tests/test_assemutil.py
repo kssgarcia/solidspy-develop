@@ -4,7 +4,7 @@ Test cases for functions on ``assemutil`` module
 
 """
 import numpy as np
-import solidspy.assemutil as ass
+import solidspykevin.assemutil as ass
 
 
 def test_sparse_assem():

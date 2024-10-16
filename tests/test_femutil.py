@@ -5,7 +5,7 @@ Test cases for functions on ``femutil`` module
 """
 import numpy as np
 import pytest
-import solidspy.femutil as fem
+import solidspykevin.femutil as fem
 
 
 #%% Tests for Shape functions and derivatives

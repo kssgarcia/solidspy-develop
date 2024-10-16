@@ -9,8 +9,8 @@ New elements can be added by including additional subroutines.
 
 """
 import numpy as np
-import solidspy.femutil as fem
-import solidspy.gaussutil as gau
+import solidspykevin.femutil as fem
+import solidspykevin.gaussutil as gau
 
 
 #%% Continuum elements

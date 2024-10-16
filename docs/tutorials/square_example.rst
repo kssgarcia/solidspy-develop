@@ -4,7 +4,7 @@ Start here: 2×2 square with axial load
 :Author: Nicolás Guarín-Zapata
 :Date: May, 2017
 
-In this document we briefly describe the use of SolidsPy, through a
+In this document we briefly describe the use of solidspykevin, through a
 simple example corresponding to a square plate under point loads.
 
 Input files
@@ -113,14 +113,14 @@ terminal using
 
 ::
 
-    >>> from solidspy import solids_GUI
+    >>> from solidspykevin import solids_GUI
     >>> solids_GUI()
 
 In Linux and you can also run the program from the terminal using
 
 ::
 
-    $ python -m solidspy
+    $ python -m solidspykevin
 
 If you have ``easygui`` installed a pop-up window will appear for you to
 select the folder with the input files
@@ -172,7 +172,7 @@ In IPython you can run the program with
 
 .. code:: python
 
-    In [1]: from solidspy import solids_GUI
+    In [1]: from solidspykevin import solids_GUI
 
     In [2]: UC = solids_GUI()
 

@@ -14,15 +14,15 @@ You can contribute in many ways:
 Create FEM Analysis
 ~~~~~~~~~~~~~~~~~~~
 
-If you run a Finite Element Analysis using SolidsPy, and want to share it
+If you run a Finite Element Analysis using solidspykevin, and want to share it
 with the community, submit a pull request to our sibling project
-`SolidsPy-meshes <https://github.com/AppliedMechanics-EAFIT/SolidsPy-meshes>`__.
+`solidspykevin-meshes <https://github.com/AppliedMechanics-EAFIT/solidspykevin-meshes>`__.
 
 
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/AppliedMechanics-EAFIT/SolidsPy/issues.
+Report bugs at https://github.com/AppliedMechanics-EAFIT/solidspykevin/issues.
 
 If you are reporting a bug, please include:
 
@@ -51,15 +51,15 @@ Please do not combine multiple feature enhancements into a single pull request.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-SolidsPy could always use more documentation, whether as part of the
-official SolidsPy docs, in docstrings, or even on the web in blog posts,
+solidspykevin could always use more documentation, whether as part of the
+official solidspykevin docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
 The best way to send feedback is to file an issue at
-https://github.com/AppliedMechanics-EAFIT/SolidsPy/issues.
+https://github.com/AppliedMechanics-EAFIT/solidspykevin/issues.
 
 If you are proposing a feature:
 

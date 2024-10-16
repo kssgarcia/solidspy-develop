@@ -9,8 +9,8 @@ analysis.
 """
 import numpy as np
 from scipy.sparse import coo_matrix
-import solidspy.uelutil as ue
-import solidspy.femutil as fem
+import solidspykevin.uelutil as ue
+import solidspykevin.femutil as fem
 
 
 def eqcounter(cons, ndof_node=2):

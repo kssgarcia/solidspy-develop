@@ -1,7 +1,7 @@
-SolidsPy reference
+solidspykevin reference
 ==================
 
-SolidsPy have the following modules:
+solidspykevin have the following modules:
 
    -  ``solids_GUI.py``: The main program;
    -  ``preprocesor.py``: Pre-processing subroutines including

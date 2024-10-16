@@ -112,7 +112,7 @@ def ele_writer(cells, cell_data, ele_tag, phy_sur,  ele_type, mat_tag, nini):
 
 
 def node_writer(points , point_data):
-    """Write nodal data as required by SolidsPy
+    """Write nodal data as required by solidspykevin
 
     Parameters
     ----------
@@ -124,7 +124,7 @@ def node_writer(points , point_data):
     Returns
     -------
     nodes_array : ndarray (int)
-        Array with the nodal data according to SolidsPy.
+        Array with the nodal data according to solidspykevin.
 
     """
     nodes_array = np.zeros([points.shape[0], 5])
@@ -134,7 +134,7 @@ def node_writer(points , point_data):
 
 
 def boundary_conditions(cells, cell_data, phy_lin, nodes_array, bc_x, bc_y):
-    """Impose nodal point boundary conditions as required by SolidsPy
+    """Impose nodal point boundary conditions as required by solidspykevin
 
     Parameters
     ----------
@@ -155,7 +155,7 @@ def boundary_conditions(cells, cell_data, phy_lin, nodes_array, bc_x, bc_y):
     -------
         nodes_array : int
             Array with the nodal data after imposing BCs according
-            to SolidsPy.
+            to solidspykevin.
 
     """
     lines = cells["line"]
@@ -172,7 +172,7 @@ def boundary_conditions(cells, cell_data, phy_lin, nodes_array, bc_x, bc_y):
 
 
 def loading(cells, cell_data, phy_lin, P_x, P_y):
-    """Impose nodal boundary conditions as required by SolidsPy
+    """Impose nodal boundary conditions as required by solidspykevin
 
     Parameters
     ----------
@@ -191,7 +191,7 @@ def loading(cells, cell_data, phy_lin, P_x, P_y):
     -------
         nodes_array : int
             Array with the nodal data after imposing BCs according
-            to SolidsPy.
+            to solidspykevin.
 
     """
     lines = cells["line"]

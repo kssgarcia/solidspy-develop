@@ -21,7 +21,7 @@ References
 
 """
 import numpy as np
-import solidspy.gaussutil as gau
+import solidspykevin.gaussutil as gau
 
 
 def eletype(eletype):

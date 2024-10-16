@@ -1,5 +1,5 @@
 ==========================================================================
-Geometry in Gmsh and solution with SolidsPy
+Geometry in Gmsh and solution with solidspykevin
 ==========================================================================
 
 :Author: Nicolás Guarín-Zapata
@@ -441,14 +441,14 @@ files.
   np.savetxt("loads.txt", loads_array, fmt=("%d", "%.6f", "%.6f"))
   np.savetxt("mater.txt", mater_array, fmt="%.6f")
 
-Solution using SolidsPy
+Solution using solidspykevin
 =======================
 
 To solve the model, we can type [4]_
 
 .. code:: python
 
-  from solidspy import solids_GUI
+  from solidspykevin import solids_GUI
   disp = solids_GUI()
 
 After running this program it will appear

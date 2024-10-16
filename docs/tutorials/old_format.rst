@@ -1,4 +1,4 @@
-Using the old format format for SolidsPy
+Using the old format format for solidspykevin
 ========================================
 
 :Author: Nicolás Guarín-Zapata
@@ -58,6 +58,6 @@ Run it in Python as follows:
 .. code:: python
 
     import matplotlib.pyplot as plt  # load matplotlib
-    from solidspy import solids_GUI  # import our package
+    from solidspykevin import solids_GUI  # import our package
     disp = solids_GUI()  # run the Finite Element Analysis
     plt.show()    # plot contours

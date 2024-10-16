@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Template to generate the input files for the FEM code SolidsPy.
+Template to generate the input files for the FEM code solidspykevin.
 The script uses meshio to read a GMSH mesh and produce
 text files nodes.txt, eles.txt , mater.txt and loads.txt
 
@@ -20,12 +20,12 @@ cell_data = mesh.cell_data
 
 
 # Process element data. In this case we have used 3-noded triangles.
-# (In SolidsPy 1 stands for quad; 2 for triangle6; 3 for triangle)
+# (In solidspykevin 1 stands for quad; 2 for triangle6; 3 for triangle)
 eles = cells["triangle"]
 els_array = np.zeros([eles.shape[0], 6], dtype=int)
 # Asigns element id
 els_array[:, 0] = range(eles.shape[0])
-# Assigns element type according to SolidsPy
+# Assigns element type according to solidspykevin
 els_array[:, 1] = 3
 # Assign element connectivities
 els_array[:, 3::] = eles

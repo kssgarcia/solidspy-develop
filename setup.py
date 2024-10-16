@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """A simple Finite Element program
 
-https://github.com/AppliedMechanics-EAFIT/SolidsPy
+https://github.com/AppliedMechanics-EAFIT/solidspykevin
 """
 
 # Always prefer setuptools over distutils
@@ -21,7 +21,7 @@ requirements = ['numpy',
                 'meshio==3.0']
 
 setup(
-    name='solidspy',
+    name='solidspykevin',
 
     version='1.1.0.post1',
 
@@ -30,7 +30,7 @@ setup(
     long_description_content_type="text/markdown",
 
     # The project's main homepage.
-    url='https://github.com/AppliedMechanics-EAFIT/SolidsPy',
+    url='https://github.com/AppliedMechanics-EAFIT/solidspykevin',
 
 
     # Author details

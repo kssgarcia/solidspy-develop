@@ -1,19 +1,19 @@
-SolidsPy: 2D-Finite Element Analysis with Python
+solidspykevin: 2D-Finite Element Analysis with Python
 ================================================
 
-.. figure:: https://raw.githubusercontent.com/AppliedMechanics-EAFIT/SolidsPy/master/docs/img/wrench.png
+.. figure:: https://raw.githubusercontent.com/AppliedMechanics-EAFIT/solidspykevin/master/docs/img/wrench.png
    :alt: Wrench under bending.
 
-.. image:: https://img.shields.io/pypi/v/solidspy.svg
+.. image:: https://img.shields.io/pypi/v/solidspykevin.svg
    :target: https://pypi.python.org/pypi/continuum_mechanics
    :alt: PyPI download
 
-.. image:: https://readthedocs.org/projects/solidspy/badge/?version=latest
-   :target: https://solidspy.readthedocs.io/en/latest/
+.. image:: https://readthedocs.org/projects/solidspykevin/badge/?version=latest
+   :target: https://solidspykevin.readthedocs.io/en/latest/
    :alt: Documentation Status
 
-.. image:: https://img.shields.io/pypi/dm/solidspy
-   :target: https://pypistats.org/packages/solidspy
+.. image:: https://img.shields.io/pypi/dm/solidspykevin
+   :target: https://pypistats.org/packages/solidspykevin
    :alt: Downloads frequency
 
 .. image:: https://zenodo.org/badge/48294591.svg
@@ -24,9 +24,9 @@ A simple finite element analysis code for 2D elasticity problems.
 The code uses as input simple-to-create text files
 defining a model in terms of nodal, element, material and load data.
 
-- Documentation: http://solidspy.readthedocs.io
-- GitHub: https://github.com/AppliedMechanics-EAFIT/SolidsPy
-- PyPI: https://pypi.org/project/solidspy/
+- Documentation: http://solidspykevin.readthedocs.io
+- GitHub: https://github.com/AppliedMechanics-EAFIT/solidspykevin
+- PyPI: https://pypi.org/project/solidspykevin/
 - Free and open source software: `MIT license <http://en.wikipedia.org/wiki/MIT_License>`__
 
 
@@ -60,16 +60,16 @@ Installation
 The code is written in Python and it depends on ``numpy``, and ``scipy``
 and. It has been tested under Windows, Mac, Linux and Android.
 
-To install *SolidsPy* open a terminal and type:
+To install *solidspykevin* open a terminal and type:
 
 ::
 
-    pip install solidspy
+    pip install solidspykevin
 
 To specify through a GUI the folder where the input
 files are stored  you will need to install `easygui <http://easygui.readthedocs.org/en/master/>`__.
 
-To easily generate the required SolidsPy text files out of a
+To easily generate the required solidspykevin text files out of a
 `Gmsh <http://gmsh.info/>`__ model you will need
 `meshio <https://github.com/nschloe/meshio>`__.
 
@@ -84,10 +84,10 @@ These two can be installed with:
 How to run a simple model
 -------------------------
 
-For further explanation check the `docs <http://solidspy.readthedocs.io/en/latest/>`__.
+For further explanation check the `docs <http://solidspykevin.readthedocs.io/en/latest/>`__.
 
 Let's suppose that we have a simple model represented by the following
-files (see `tutorials/square example <http://solidspy.readthedocs.io/en/latest/tutorials/square_example.html>`__
+files (see `tutorials/square example <http://solidspykevin.readthedocs.io/en/latest/tutorials/square_example.html>`__
 for further explanation).
 
 
@@ -133,7 +133,7 @@ Run it in Python as follows:
 .. code:: python
 
     import matplotlib.pyplot as plt  # load matplotlib
-    from solidspy import solids_GUI  # import our package
+    from solidspykevin import solids_GUI  # import our package
     disp = solids_GUI()  # run the Finite Element Analysis
     plt.show()    # plot contours
 
@@ -151,25 +151,25 @@ License <http://creativecommons.org/licenses/by/4.0/>`__.
 Citation
 --------
 
-To cite SolidsPy in publications use
+To cite solidspykevin in publications use
 
-    Nicolás Guarín-Zapata, Juan Gomez (2023). SolidsPy: Version 1.1.0
+    Nicolás Guarín-Zapata, Juan Gomez (2023). solidspykevin: Version 1.1.0
     (Version v1.1.0). Zenodo. <https://doi.org/10.5281/zenodo.7694030>
 
 A BibTeX entry for LaTeX users is
 
 .. code:: bibtex
 
-    @software{solidspy,
-     title = {SolidsPy: 2D-Finite Element Analysis with Python},
+    @software{solidspykevin,
+     title = {solidspykevin: 2D-Finite Element Analysis with Python},
      version = {1.1.0},
      author = {Guarín-Zapata, Nicolás and Gómez, Juan},
      year = 2023,
      keywords = {Python, Finite elements, Scientific computing, Computational mechanics},
-     abstract = {SolidsPy is a simple finite element analysis code for
+     abstract = {solidspykevin is a simple finite element analysis code for
        2D elasticity problems. The code uses as input simple-to-create text
        files defining a model in terms of nodal, element, material and
        load data.},
-     url = {https://github.com/AppliedMechanics-EAFIT/SolidsPy},
+     url = {https://github.com/AppliedMechanics-EAFIT/solidspykevin},
      doi = {http://doi.org/10.5281/zenodo.4029270}
     }

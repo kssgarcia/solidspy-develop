@@ -15,10 +15,10 @@ Created by Juan Gomez and Nicolas Guarin-Zapata.
 from datetime import datetime
 import matplotlib.pyplot as plt
 import numpy as np
-import solidspy.preprocesor as pre
-import solidspy.postprocesor as pos
-import solidspy.assemutil as ass
-import solidspy.solutil as sol
+import solidspykevin.preprocesor as pre
+import solidspykevin.postprocesor as pos
+import solidspykevin.assemutil as ass
+import solidspykevin.solutil as sol
 
 
 def solids_GUI(plot_contours=True, compute_strains=False, folder=None):

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Integration tests for solidspy
+Integration tests for solidspykevin
 
 """
 import numpy as np
 from scipy.sparse.linalg import eigsh
-import solidspy.postprocesor as pos
-import solidspy.assemutil as ass
-import solidspy.solutil as sol
+import solidspykevin.postprocesor as pos
+import solidspykevin.assemutil as ass
+import solidspykevin.solutil as sol
 
 
 def test_4_elements():

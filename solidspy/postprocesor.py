@@ -7,8 +7,8 @@ This module contains functions to postprocess results.
 
 """
 import numpy as np
-import solidspy.femutil as fe
-import solidspy.uelutil as uel
+import solidspykevin.femutil as fe
+import solidspykevin.uelutil as uel
 import matplotlib.pyplot as plt
 from matplotlib.tri import Triangulation
 
@@ -428,8 +428,8 @@ def stress_truss(nodes, elements, mats, disp):
     The following examples are taken from [1]_. In all the examples
     :math:`A=1`, :math:`E=1`.
 
-    >>> import solidspy.assemutil as ass
-    >>> import solidspy.solutil as sol
+    >>> import solidspykevin.assemutil as ass
+    >>> import solidspykevin.solutil as sol
 
     >>> def fem_sol(nodes, elements, mats, loads):
     ...     assem_op, bc_array , neq = ass.DME(nodes[:, 3:], elements)
